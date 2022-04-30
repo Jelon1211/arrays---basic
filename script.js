@@ -15,7 +15,7 @@ console.log(mapped);
 
 //Join, łączy array w stringa. Defaultowo jest ,
 const joined = mapped.join("");
-console.log(joined);
+console.log("To jest string -> ", joined);
 
 // Zamienie wszystkie elementy w array w single value jakim jest accumulator
 // 1 - accumulator -5, currentValue -4 => -9
@@ -25,4 +25,25 @@ console.log(joined);
 const reduced = array.reduce(
   (accumulator, currentValue) => accumulator + currentValue
 );
-console.log(reduced);
+console.log("Wszystkie elementy dodane ", reduced);
+
+//Nie tworzy nowej array. Usuwa wszystkie elementy z array, które są poza parametrami.
+//Pierwszy parametr od którego zaczyanmy drugi na ktorym konczymy
+const sliced = array.slice(0, 10);
+console.log("Kopiuje od indexu 0 do 10 ", sliced);
+
+//splice może zastąpić elementy w array.
+//Parametry to index strat, finished, następne co ma się zastapić
+const spliced = array.map((i) => i);
+spliced.splice(1, 3, 1, 2, 3);
+console.log(
+  "Wszystko od indexu 1 do 3 zostało usuniete i wstawione w to 1,2,3 ",
+  spliced
+);
+
+//split, zmienia stringa w array.
+//Pierwszey parametr to separator, jak pusty string to element w array dodaje się każda litera.
+// Drugi to limit do SŁÓW.
+const sentence = "hello my beautiful world we live in";
+const splited = sentence.split(" ", 1);
+console.log("Tylko pierwszy wyraz -> ", splited);
