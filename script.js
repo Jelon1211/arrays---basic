@@ -47,3 +47,7 @@ console.log(
 const sentence = "hello my beautiful world we live in";
 const splited = sentence.split(" ", 1);
 console.log("Tylko pierwszy wyraz -> ", splited);
+
+//find znajduje pierwszy element w array. Parametry element,index.
+const found = array.find((element) => (element = element));
+console.log(found);
