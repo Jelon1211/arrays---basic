@@ -52,20 +52,28 @@ console.log("Tylko pierwszy wyraz -> ", splited);
 const found = array.find((element) => (element = element));
 console.log("Znaleziony pierwszy element array ", found);
 
-let array2 = [1, 2, [3, 4, 5, 6], 1, 1, 3];
-// multidimensional array = Holds a matrix of elements.
-//                                              An array of arrays
-
+let array2 = [
+  [1, 2],
+  [3, 4, 5, 6],
+  [1, 1, 3],
+];
+/*
 let garage = [
   ["Mustang", "F-150", "Explorer"],
   ["Corvette", "Silverado", "Equinox"],
   ["Camry", "Highlander", "Tacoma"],
 ];
 
-//console.log(garage[2][2]);
-
+console.log(garage[2][2]);
 for (let i = 0; i < garage.length; i++) {
   for (let j = 0; j < garage[i].length; j++) {
     console.log(garage[i][j]);
   }
 }
+*/
+array2.forEach(function (row) {
+  row.forEach(function (element) {
+    console.log(element);
+  });
+  console.log("-------");
+});
